@@ -4,15 +4,15 @@ Clojure implementation of @jehna's Verbal Expression.
 
 ## Usage
 
-(def valid-url? (verbal-expression start-of-line
-                                   (then "http")
-                                   (maybe "s")
-                                   (then "://")
-                                   (maybe "www.")
-                                   (anything-but " ")
-                                   end-of-line))
+  (def valid-url? (verbal-expression start-of-line
+                                     (then "http")
+                                     (maybe "s")
+                                     (then "://")
+                                     (maybe "www.")
+                                     (anything-but " ")
+                                     end-of-line))
 
-(valid-url? "http://www.google.com")
+  (valid-url? "http://www.google.com")
 
 ## License
 
