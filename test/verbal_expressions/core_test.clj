@@ -1,6 +1,6 @@
-(ns verbalexpressions.core-test
+(ns verbal-expressions.core-test
   (:require [clojure.test :refer :all]
-            [verbalexpressions.core :refer :all]))
+            [verbal-expressions.core :refer :all]))
 
 (def valid-url? (verbal-expression start-of-line
                                    (then "http")
@@ -9,6 +9,8 @@
                                    (maybe "www.")
                                    (anything-but " ")
                                    end-of-line))
+(defn is-not [x] (is (not x)))
+
 (deftest a-test
   (testing "valid URLs"
     (is (valid-url? "http://www.google.com"))

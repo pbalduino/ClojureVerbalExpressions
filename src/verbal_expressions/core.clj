@@ -1,4 +1,4 @@
-(ns verbalexpressions.core)
+(ns verbal-expressions.core)
 
 (def start-of-line
   (fn [] "^"))

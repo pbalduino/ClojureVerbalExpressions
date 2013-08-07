@@ -1,4 +1,4 @@
-# verbalexpressions
+# verbal-expressions 0.1.0
 
 Clojure implementation of @jehna's Verbal Expression.
 
