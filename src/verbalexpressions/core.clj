@@ -1,6 +1,7 @@
 (ns verbalexpressions.core)
 
-(defn start-of-line [] "^")
+(def start-of-line
+  (fn [] "^"))
 
 (defn then [value]
   (fn [] value))
@@ -11,7 +12,8 @@
 (defn anything-but [value]
   (fn [] (str "[^" value "]+")))
 
-(defn end-of-line [] "$")
+(def end-of-line
+  (fn [] "$"))
 
 (defn- translate-to-regex [expr]
   (loop [result ""
@@ -24,5 +26,4 @@
 (defn verbal-expression [& expr]
   (let [expression (translate-to-regex expr)
         regex      (re-pattern expression)]
-    (println expression)
     (fn [x] (not (empty? (re-seq regex x))))))
