@@ -2,6 +2,8 @@
 
 Clojure implementation of @jehna's Verbal Expression.
 
+Original library: [https://github.com/jehna/VerbalExpressions]
+
 ## Usage
 
     (def valid-url? (verbal-expression start-of-line

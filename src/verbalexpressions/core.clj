@@ -15,6 +15,34 @@
 (def end-of-line
   (fn [] "$"))
 
+; TODO
+
+; modifiers
+;   anything()
+;   find(value)
+
+; special characters and groups
+;   any(value)
+;   anyOf(value)
+;   br()
+;   lineBreak()
+;   range(from, to)
+;   tab()
+;   word()
+
+; modifiers
+;   withAnyCase()
+;   stopAtFirst()
+;   searchOneLine()
+
+; functions
+;   replace(source, value)
+
+; other
+;   add( expression )
+;   multiple( value )
+;   or()
+
 (defn- translate-to-regex [expr]
   (loop [result ""
          list expr]
