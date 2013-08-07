@@ -8,10 +8,10 @@
 (defn maybe [value]
   (fn [] (str "(" value ")?")))
 
+(defn anything-but [value]
+  (fn [] (str "[^" value "]+")))
 
-(defn anything-but [value])
-
-(defn end-of-line [])
+(defn end-of-line [] "$")
 
 (defn- translate-to-regex [expr]
   (loop [result ""
