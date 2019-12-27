@@ -6,15 +6,17 @@ Original library: [https://github.com/jehna/VerbalExpressions]
 
 ## Usage
 
-    (def valid-url? (verbal-expression start-of-line
-                                       (then "http")
-                                       (maybe "s")
-                                       (then "://")
-                                       (maybe "www.")
-                                       (anything-but " ")
-                                       end-of-line))
+```clojure
+(def valid-url? (verbal-expression start-of-line
+                                   (then "http")
+                                   (maybe "s")
+                                   (then "://")
+                                   (maybe "www.")
+                                   (anything-but " ")
+                                   end-of-line))
 
-    (valid-url? "http://www.google.com")
+(valid-url? "http://www.google.com")
+```
 
 ## License
 
